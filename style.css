@@ -58,7 +58,7 @@
   .ht-big{font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(64px,13vw,168px);
     line-height:.84; letter-spacing:-.01em; color:var(--cenere); margin:0;}
   .hero-wasp{position:absolute; right:-6vw; top:50%; width:min(58vw,660px); height:auto;
-    transform:translateY(-52%) rotate(-16deg); z-index:1; opacity:.92;}
+    transform:translateY(-52%) translateX(-45%) rotate(30deg); z-index:1; opacity:.92;}
   .scroll-cue{position:absolute; bottom:34px; left:0; right:0; text-align:center;
     font-family:'Syne',sans-serif; font-size:11px; letter-spacing:.18em; text-transform:uppercase;
     color:var(--cenere-soft); z-index:2;}
