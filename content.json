@@ -9,14 +9,10 @@
       "parola": "Struttura",
       "left": 18, "top": 25,
       "color": "#F6C500",
+      "fg": "#14110F",
       "desc": "Libri · riviste · cataloghi · identità per pubblicazioni",
       "opere": [
-        {"title": "Opera 01"},
-        {"title": "Opera 02"},
-        {"title": "Opera 03"},
-        {"title": "Opera 04"},
-        {"title": "Opera 05"},
-        {"title": "Opera 06"}
+        {"title": "Quiet Grid"}
       ]
     },
     {
@@ -28,91 +24,53 @@
       "parola": "Metamorfosi",
       "left": 16, "top": 70,
       "color": "#E63329",
+      "fg": "#FBF3E4",
       "desc": "Manifesti · locandine · stampe · progetti tipografici",
-      "opere": [
-        {"title": "Opera 01"},
-        {"title": "Opera 02"},
-        {"title": "Opera 03"},
-        {"title": "Opera 04"},
-        {"title": "Opera 05"},
-        {"title": "Opera 06"}
-      ]
+      "opere": []
     },
     {
       "id": "03",
-      "gesto": "Flectere",
-      "gestoBreak": ["FLEC","TE","RE"],
-      "sezione": "UI Design",
-      "insetto": "Scarabaeus",
-      "parola": "Convergenza",
-      "left": 65, "top": 50,
-      "color": "#F2600C",
-      "desc": "Interfacce · prototipi · design system · siti web",
-      "opere": [
-        {"title": "Opera 01"},
-        {"title": "Opera 02"},
-        {"title": "Opera 03"},
-        {"title": "Opera 04"},
-        {"title": "Opera 05"},
-        {"title": "Opera 06"}
-      ]
-    },
-    {
-      "id": "04",
-      "gesto": "Prehendere",
-      "gestoBreak": ["PRE","HEN","DE","RE"],
-      "sezione": "Progetti digitali",
-      "insetto": "Mantis",
-      "parola": "Cattura",
-      "left": 85, "top": 30,
-      "color": "#B8720A",
-      "desc": "App · piattaforme · dashboard · prodotti digitali",
-      "opere": [
-        {"title": "Opera 01"},
-        {"title": "Opera 02"},
-        {"title": "Opera 03"},
-        {"title": "Opera 04"},
-        {"title": "Opera 05"},
-        {"title": "Opera 06"}
-      ]
-    },
-    {
-      "id": "05",
       "gesto": "Incidere",
       "gestoBreak": ["IN","CI","DE","RE"],
       "sezione": "Illustrazione",
       "insetto": "Libellula",
       "parola": "Solco",
       "left": 34, "top": 90,
-      "color": "#D93B1A",
+      "color": "#F2600C",
+      "fg": "#FBF3E4",
       "desc": "Illustrazioni editoriali · icone · pattern · tavole",
       "opere": [
-        {"title": "Opera 01"},
-        {"title": "Opera 02"},
-        {"title": "Opera 03"},
-        {"title": "Opera 04"},
-        {"title": "Opera 05"},
-        {"title": "Opera 06"}
+        {"title": "Sembianti"},
+        {"title": "Insetti"}
       ]
     },
     {
-      "id": "06",
+      "id": "04",
+      "gesto": "Prehendere",
+      "gestoBreak": ["PRE","HEN","DE","RE"],
+      "sezione": "Progetti Digitali",
+      "insetto": "Mantis",
+      "parola": "Cattura",
+      "left": 85, "top": 30,
+      "color": "#F6C500",
+      "fg": "#14110F",
+      "desc": "App · piattaforme · dashboard · prodotti digitali",
+      "opere": [
+        {"title": "Ineffabulae"}
+      ]
+    },
+    {
+      "id": "05",
       "gesto": "Vibrare",
       "gestoBreak": ["VI","BRA","RE"],
       "sezione": "Motion Design",
       "insetto": "Cicada",
       "parola": "Vibrazione",
       "left": 90, "top": 70,
-      "color": "#F0A202",
+      "color": "#E63329",
+      "fg": "#FBF3E4",
       "desc": "Animazioni · transizioni · loop · motion graphics",
-      "opere": [
-        {"title": "Opera 01"},
-        {"title": "Opera 02"},
-        {"title": "Opera 03"},
-        {"title": "Opera 04"},
-        {"title": "Opera 05"},
-        {"title": "Opera 06"}
-      ]
+      "opere": []
     }
   ]
 }

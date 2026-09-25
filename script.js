@@ -1,15 +1,18 @@
 const CREAM = '#FBF3E4';
 const ICONS = {
-  Vespa: `<img src="assets/vespa.png" alt="Vespa" style="transform: rotate(45deg);">`,
-  Papilio: `<img src="assets/papillo.png" alt="Papillo" style="transform: rotate(45deg);">`,
-  //Scarabaeus: `<img src="assets/vespa.png" alt="Vespa" style="transform: rotate(45deg);">`,
-  //Mantis: `<img src="assets/vespa.png" alt="Vespa" style="transform: rotate(45deg);">`,
-  Libellula: `<img src="assets/libellula.png." alt="Libellula" style="transform: rotate(45deg);">`,
-  //Cicada: `<img src="assets/vespa.png" alt="Vespa" style="transform: rotate(45deg);">`,
+  Vespa: `<img src="assets/vespa.png" alt="Vespa">`,
+  Papilio: `<img src="assets/papilio.png" alt="Papilio">`,
+  Mantis: `<svg viewBox="0 0 40 40"><path d="M14 34 L20 6 L26 34 Z" fill="${CREAM}"/><path d="M17 14 L4 8 M17 18 L4 20" stroke="${CREAM}" stroke-width="2.6"/><circle cx="20" cy="6" r="4" fill="${CREAM}"/></svg>`,
+  Libellula: `<img src="assets/libellula.png" alt="Libellula">`,
+  Cicada: `<svg viewBox="0 0 40 40"><path d="M20 20 L2 8 C2 24 12 26 20 20 Z" fill="${CREAM}" opacity=".85"/><path d="M20 20 L38 8 C38 24 28 26 20 20 Z" fill="${CREAM}" opacity=".85"/><ellipse cx="20" cy="20" rx="6" ry="9" fill="${CREAM}"/></svg>`,
 };
 
+// alla fine, ogni insetto avra qui la sua immagine vera — una riga per insetto,
+// stesso schema di Vespa/Papilio/Libellula. Quelli assenti mostrano ancora l'icona piccola sopra.
 const ILLUSTRATIONS = {
   Vespa: `<img src="assets/vespa.png" alt="Vespa">`,
+  Papilio: `<img src="assets/papilio.png" alt="Papilio">`,
+  Libellula: `<img src="assets/libellula.png" alt="Libellula">`,
 };
 
 function getIllustration(s){
@@ -121,7 +124,7 @@ function init(SECTIONS){
   SECTIONS.forEach(s=>{
     const item = document.createElement('button');
     item.className = 'nav-item';
-    item.innerHTML = `<span class="n">${s.id}</span><span class="g">${s.gesto}</span><span class="k">${s.parola}</span>`;
+    item.innerHTML = `<span class="n caption">${s.id}</span><span class="g menu">${s.gesto}</span><span class="k caption">${s.parola}</span>`;
     item.addEventListener('click', ()=>{ toggleNav(false); openSection(s); });
     navList.appendChild(item);
   });
@@ -135,6 +138,8 @@ function init(SECTIONS){
   }
   burgerBtn.addEventListener('click', ()=>toggleNav());
   navBackdrop.addEventListener('click', ()=>toggleNav(false));
+  const listFallback = document.getElementById('listFallback');
+  if(listFallback) listFallback.addEventListener('click', ()=>toggleNav(true));
 
   // corpus
   document.getElementById('corpusLink').addEventListener('click', ()=>{
@@ -155,6 +160,7 @@ function init(SECTIONS){
     hideCard();
     activeTouchId = null;
     overlay.style.setProperty('--ov-bg', s.color);
+    overlay.style.setProperty('--ov-fg', s.fg || '#FBF3E4');
     document.getElementById('ovNumber').textContent = s.id;
     document.getElementById('ovIllustration').innerHTML = getIllustration(s);
     document.getElementById('ovInsetto').textContent = s.insetto;
@@ -167,7 +173,7 @@ function init(SECTIONS){
     ovContent.innerHTML = '';
     (s.opere || []).forEach(op=>{
       const card = document.createElement('div');
-      card.className = 'op-card';
+      card.className = 'op-card h4';
       card.textContent = op.title;
       ovContent.appendChild(card);
     });
@@ -177,8 +183,8 @@ function init(SECTIONS){
     const next = SECTIONS[(idx + 1) % SECTIONS.length];
     const sectionNav = document.getElementById('sectionNav');
     sectionNav.innerHTML = `
-      <button class="prev">← ${prev.gesto}</button>
-      <button class="next">${next.gesto} →</button>`;
+      <button class="prev caption">← ${prev.gesto}</button>
+      <button class="next caption">${next.gesto} →</button>`;
     sectionNav.querySelector('.prev').addEventListener('click', ()=>openSection(prev));
     sectionNav.querySelector('.next').addEventListener('click', ()=>openSection(next));
 
