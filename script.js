@@ -1,11 +1,11 @@
 const CREAM = '#FBF3E4';
 const ICONS = {
   Vespa: `<img src="assets/vespa.png" alt="Vespa" style="transform: rotate(45deg);">`,
-  Papilio: `<svg viewBox="0 0 40 40"><path d="M20 20 C10 6 2 8 4 20 C2 32 10 34 20 20 Z" fill="${CREAM}"/><path d="M20 20 C30 6 38 8 36 20 C38 32 30 34 20 20 Z" fill="${CREAM}" opacity=".85"/><rect x="19" y="12" width="2" height="16" fill="${CREAM}"/></svg>`,
-  Scarabaeus: `<svg viewBox="0 0 40 40"><ellipse cx="20" cy="21" rx="13" ry="10" fill="${CREAM}"/><circle cx="20" cy="9" r="5" fill="${CREAM}"/><line x1="20" y1="12" x2="20" y2="30" stroke="#14110F" stroke-width="1.4" opacity=".4"/></svg>`,
-  Mantis: `<svg viewBox="0 0 40 40"><path d="M14 34 L20 6 L26 34 Z" fill="${CREAM}"/><path d="M17 14 L4 8 M17 18 L4 20" stroke="${CREAM}" stroke-width="2.6"/><circle cx="20" cy="6" r="4" fill="${CREAM}"/></svg>`,
-  Libellula: `<svg viewBox="0 0 40 40"><rect x="18" y="4" width="4" height="32" rx="2" fill="${CREAM}"/><ellipse cx="10" cy="12" rx="9" ry="3" fill="${CREAM}" opacity=".8"/><ellipse cx="30" cy="12" rx="9" ry="3" fill="${CREAM}" opacity=".8"/><ellipse cx="10" cy="20" rx="9" ry="3" fill="${CREAM}" opacity=".55"/><ellipse cx="30" cy="20" rx="9" ry="3" fill="${CREAM}" opacity=".55"/></svg>`,
-  Cicada: `<svg viewBox="0 0 40 40"><path d="M20 20 L2 8 C2 24 12 26 20 20 Z" fill="${CREAM}" opacity=".85"/><path d="M20 20 L38 8 C38 24 28 26 20 20 Z" fill="${CREAM}" opacity=".85"/><ellipse cx="20" cy="20" rx="6" ry="9" fill="${CREAM}"/></svg>`,
+  Papilio: `<img src="assets/papillo.png" alt="Papillo" style="transform: rotate(45deg);">`,
+  //Scarabaeus: `<img src="assets/vespa.png" alt="Vespa" style="transform: rotate(45deg);">`,
+  //Mantis: `<img src="assets/vespa.png" alt="Vespa" style="transform: rotate(45deg);">`,
+  Libellula: `<img src="assets/libellula.png." alt="Libellula" style="transform: rotate(45deg);">`,
+  //Cicada: `<img src="assets/vespa.png" alt="Vespa" style="transform: rotate(45deg);">`,
 };
 
 const ILLUSTRATIONS = {

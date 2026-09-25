@@ -57,8 +57,17 @@
     color:var(--cenere); margin:0 0 2px;}
   .ht-big{font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(64px,13vw,168px);
     line-height:.84; letter-spacing:-.01em; color:var(--cenere); margin:0;}
-  .hero-wasp{position:absolute; right:-6vw; top:50%; width:min(58vw,660px); height:auto;
-    transform:translateY(-52%) translateX(-45%) rotate(30deg); z-index:1; opacity:.92;}
+  .hero-wasp{
+    position: absolute;
+    right: -6vw;
+    top: 70%;
+    width: min(58vw, 660px);
+    height: auto;
+    scale: 1.5;
+    transform: translateY(-52%) translateX(-20%) rotate(30deg);
+    z-index: 1;
+    opacity: .92;
+  }
   .scroll-cue{position:absolute; bottom:34px; left:0; right:0; text-align:center;
     font-family:'Syne',sans-serif; font-size:11px; letter-spacing:.18em; text-transform:uppercase;
     color:var(--cenere-soft); z-index:2;}
@@ -68,8 +77,16 @@
   /* map section */
   .map-section{height:100vh; position:relative; overflow:hidden;}
   .plane-wrap{position:absolute; inset:0;}
-  .plane{position:absolute; top:calc(var(--header-h) + 60px); bottom:76px; left:80px; right:56px;
-    border-left:1px solid rgba(251,243,228,.22); border-bottom:1px solid rgba(251,243,228,.22);}
+  .plane {
+    position: absolute;
+    top: calc(var(--header-h) + 60px);
+    bottom: 76px;
+    left: 80px;
+    right: 56px;
+    border-left: 1px solid #FBF3E4;
+    border-bottom: 1px solid #FBF3E4;
+    background-color: rgba(251 243 228 / 0.2);
+  }
   .grid-svg{position:absolute; inset:0; width:100%; height:100%; overflow:visible;
     transition: transform .5s cubic-bezier(.2,.7,.2,1);}
   .grid-line{stroke:var(--grid-line); stroke-width:.12;}
@@ -86,13 +103,13 @@
 
   .nodes{position:absolute; inset:0; transition: transform .5s cubic-bezier(.2,.7,.2,1);}
   .node{position:absolute; transform:translate(-50%,-50%);
-    width:46px; height:46px; border-radius:50%; border:none; cursor:pointer;
+    width:80px; height:80px; border-radius:50%; border:none; cursor:pointer;
     display:flex; align-items:center; justify-content:center;
     animation: nodeIn .6s cubic-bezier(.2,.7,.2,1) both, floaty 6s ease-in-out infinite;
     animation-delay: calc(var(--i) * .09s), calc(.6s + var(--i) * .35s);
     box-shadow:0 8px 22px rgba(0,0,0,.35); transition: transform .25s ease, box-shadow .25s ease;}
   .node svg{width:20px; height:20px; position:relative;}
-  .node img{width:20px; height:20px; object-fit:contain; position:relative;}
+  .node img{height:100px; object-fit:contain; position:relative;}
   .node:hover, .node:focus-visible{transform:translate(-50%,-50%) scale(1.18);
     box-shadow:0 10px 30px rgba(0,0,0,.5), 0 0 0 10px rgba(251,243,228,.06);}
   .node:focus-visible{outline:2px solid var(--cream); outline-offset:4px;}
