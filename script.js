@@ -1,30 +1,19 @@
 const CREAM = '#FBF3E4';
 const ICONS = {
-  Vespa: `<img src="assets/vespa.png" style="transform: rotate(45deg) scale(.05); opacity: 90%">`,  Papilio: `<path d="M20 20 C10 6 2 8 4 20 C2 32 10 34 20 20 Z" fill="${CREAM}"/><path d="M20 20 C30 6 38 8 36 20 C38 32 30 34 20 20 Z" fill="${CREAM}" opacity=".85"/><rect x="19" y="12" width="2" height="16" fill="${CREAM}"/>`,
-  Scarabaeus: `<ellipse cx="20" cy="21" rx="13" ry="10" fill="${CREAM}"/><circle cx="20" cy="9" r="5" fill="${CREAM}"/><line x1="20" y1="12" x2="20" y2="30" stroke="#14110F" stroke-width="1.4" opacity=".4"/>`,
-  Mantis: `<path d="M14 34 L20 6 L26 34 Z" fill="${CREAM}"/><path d="M17 14 L4 8 M17 18 L4 20" stroke="${CREAM}" stroke-width="2.6"/><circle cx="20" cy="6" r="4" fill="${CREAM}"/>`,
-  Libellula: `<rect x="18" y="4" width="4" height="32" rx="2" fill="${CREAM}"/><ellipse cx="10" cy="12" rx="9" ry="3" fill="${CREAM}" opacity=".8"/><ellipse cx="30" cy="12" rx="9" ry="3" fill="${CREAM}" opacity=".8"/><ellipse cx="10" cy="20" rx="9" ry="3" fill="${CREAM}" opacity=".55"/><ellipse cx="30" cy="20" rx="9" ry="3" fill="${CREAM}" opacity=".55"/>`,
-  Cicada: `<path d="M20 20 L2 8 C2 24 12 26 20 20 Z" fill="${CREAM}" opacity=".85"/><path d="M20 20 L38 8 C38 24 28 26 20 20 Z" fill="${CREAM}" opacity=".85"/><ellipse cx="20" cy="20" rx="6" ry="9" fill="${CREAM}"/>`,
+  Vespa: `<img src="assets/vespa.png" alt="Vespa" style="transform: rotate(45deg);">`,
+  Papilio: `<svg viewBox="0 0 40 40"><path d="M20 20 C10 6 2 8 4 20 C2 32 10 34 20 20 Z" fill="${CREAM}"/><path d="M20 20 C30 6 38 8 36 20 C38 32 30 34 20 20 Z" fill="${CREAM}" opacity=".85"/><rect x="19" y="12" width="2" height="16" fill="${CREAM}"/></svg>`,
+  Scarabaeus: `<svg viewBox="0 0 40 40"><ellipse cx="20" cy="21" rx="13" ry="10" fill="${CREAM}"/><circle cx="20" cy="9" r="5" fill="${CREAM}"/><line x1="20" y1="12" x2="20" y2="30" stroke="#14110F" stroke-width="1.4" opacity=".4"/></svg>`,
+  Mantis: `<svg viewBox="0 0 40 40"><path d="M14 34 L20 6 L26 34 Z" fill="${CREAM}"/><path d="M17 14 L4 8 M17 18 L4 20" stroke="${CREAM}" stroke-width="2.6"/><circle cx="20" cy="6" r="4" fill="${CREAM}"/></svg>`,
+  Libellula: `<svg viewBox="0 0 40 40"><rect x="18" y="4" width="4" height="32" rx="2" fill="${CREAM}"/><ellipse cx="10" cy="12" rx="9" ry="3" fill="${CREAM}" opacity=".8"/><ellipse cx="30" cy="12" rx="9" ry="3" fill="${CREAM}" opacity=".8"/><ellipse cx="10" cy="20" rx="9" ry="3" fill="${CREAM}" opacity=".55"/><ellipse cx="30" cy="20" rx="9" ry="3" fill="${CREAM}" opacity=".55"/></svg>`,
+  Cicada: `<svg viewBox="0 0 40 40"><path d="M20 20 L2 8 C2 24 12 26 20 20 Z" fill="${CREAM}" opacity=".85"/><path d="M20 20 L38 8 C38 24 28 26 20 20 Z" fill="${CREAM}" opacity=".85"/><ellipse cx="20" cy="20" rx="6" ry="9" fill="${CREAM}"/></svg>`,
 };
 
-const VESPA_ILLUSTRATION = `<svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
-  <path d="M100,140 C160,60 260,20 340,25 C300,70 240,110 180,150 C150,165 120,160 100,140 Z" fill="#6E675F" opacity=".5"/>
-  <path d="M95,155 C140,120 200,105 250,110 C215,140 170,165 130,175 C110,180 95,170 95,155 Z" fill="#6E675F" opacity=".38"/>
-  <path d="M110,135 L300,45 M105,150 L260,90 M115,125 L330,55" stroke="#14110F" stroke-width="1.2" opacity=".3" fill="none"/>
-  <path d="M80,150 C100,135 120,135 130,150 L128,190 C118,205 95,205 82,190 Z" fill="#6E675F"/>
-  <path d="M128,168 C140,165 150,165 158,168 L158,178 C150,181 140,181 128,178 Z" fill="#6E675F"/>
-  <path d="M158,168 C190,110 250,105 300,130 C340,150 365,165 380,175 C365,185 340,200 300,220 C250,245 190,240 158,182 Z" fill="#6E675F"/>
-  <path d="M197,120 C205,150 205,185 197,215 L213,213 C220,183 220,148 213,122 Z" fill="#14110F" opacity=".3"/>
-  <path d="M243,113 C250,145 250,180 243,210 L259,208 C266,178 266,143 259,116 Z" fill="#14110F" opacity=".3"/>
-  <path d="M285,120 C290,148 290,178 285,203 L299,200 C305,175 305,148 299,123 Z" fill="#14110F" opacity=".3"/>
-  <circle cx="55" cy="170" r="30" fill="#6E675F"/>
-  <path d="M50,145 Q30,110 15,95 M62,145 Q55,105 45,85" stroke="#6E675F" stroke-width="2" fill="none"/>
-  <ellipse cx="48" cy="163" rx="11" ry="15" fill="#14110F"/>
-  <path d="M95,195 L75,240 M110,198 L95,245 M150,180 L140,225" stroke="#6E675F" stroke-width="3.5" fill="none"/>
-</svg>`;
+const ILLUSTRATIONS = {
+  Vespa: `<img src="assets/vespa.png" alt="Vespa">`,
+};
 
 function getIllustration(s){
-  if(s.insetto === 'Vespa') return VESPA_ILLUSTRATION;
+  if(ILLUSTRATIONS[s.insetto]) return ILLUSTRATIONS[s.insetto];
   return `<svg viewBox="0 0 40 40" opacity=".85">${ICONS[s.insetto]}</svg>`;
 }
 
@@ -64,7 +53,7 @@ function init(SECTIONS){
     btn.style.background = s.color;
     btn.style.setProperty('--i', i);
     btn.setAttribute('aria-label', `${s.sezione} — ${s.gesto}`);
-    btn.innerHTML = `<svg viewBox="0 0 40 40">${ICONS[s.insetto]}</svg>`;
+    btn.innerHTML = ICONS[s.insetto];
     if(isTouch){
       btn.addEventListener('click', ()=>{
         if(activeTouchId === s.id){ openSection(s); }

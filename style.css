@@ -92,6 +92,7 @@
     animation-delay: calc(var(--i) * .09s), calc(.6s + var(--i) * .35s);
     box-shadow:0 8px 22px rgba(0,0,0,.35); transition: transform .25s ease, box-shadow .25s ease;}
   .node svg{width:20px; height:20px; position:relative;}
+  .node img{width:20px; height:20px; object-fit:contain; position:relative;}
   .node:hover, .node:focus-visible{transform:translate(-50%,-50%) scale(1.18);
     box-shadow:0 10px 30px rgba(0,0,0,.5), 0 0 0 10px rgba(251,243,228,.06);}
   .node:focus-visible{outline:2px solid var(--cream); outline-offset:4px;}
@@ -137,7 +138,7 @@
   .cover-body{position:absolute; top:50%; left:10vw; right:10vw; transform:translateY(-50%);
     display:flex; align-items:center; gap:5vw; flex-wrap:wrap;}
   .cover-illustration{width:min(24vw,280px); flex:0 0 auto;}
-  .cover-illustration svg{width:100%; height:auto; display:block;}
+  .cover-illustration svg, .cover-illustration img{width:100%; height:auto; display:block;}
   .cover-text{flex:1 1 320px; min-width:280px;}
   .cover-insetto{font-style:italic; text-transform:uppercase; letter-spacing:.1em;
     font-size:15px; color:var(--ink); margin-bottom:8px;}
