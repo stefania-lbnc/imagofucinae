@@ -33,19 +33,19 @@
 .bg-ash{background:var(--ash);}
 
 /* tipografia — classi di utilità, usale su qualsiasi elemento */
-.h1{font-family:'Syne',sans-serif; font-weight:800; font-size:240px; line-height:210px; margin:0;}
-.h2{font-family:'Syne',sans-serif; font-weight:800; font-size:80px; line-height:1; margin:0;}
-.h3{font-family:'Libre Baskerville',serif; font-weight:700; font-style:italic; font-size:36px; margin:0;}
-.h4{font-family:'Libre Baskerville',serif; font-weight:400; font-style:italic; font-size:16px; margin:0;}
-.paragraph{font-family:'Libre Baskerville',serif; font-weight:400; font-size:12px; line-height:1.5; margin:0;}
+h1, .h1{font-family:'Syne',sans-serif; font-weight:800; font-size:220px; line-height:160px; margin:0;}
+h2, .h2{font-family:'Syne',sans-serif; font-weight:800; font-size:100px; line-height:80px; margin:0;}
+h3, .h3{font-family:'Libre Baskerville',serif; font-weight:700; font-style:italic; font-size:36px; margin:0;}
+h4, .h4{font-family:'Libre Baskerville',serif; font-weight:400; font-style:italic; font-size:16px; margin:0;}
+p, .paragraph{font-family:'Libre Baskerville',serif; font-weight:400; font-size:12px; line-height:1.5; margin:0;}
 .caption{font-family:'Syne',sans-serif; font-weight:400; font-size:10px; letter-spacing:.08em; text-transform:uppercase; margin:0;}
 .menu{font-family:'Syne',sans-serif; font-weight:400; font-size:24px; margin:0;}
 
 @media (max-width:720px){
-  .h1{font-size:100px; line-height:90px;}
-  .h2{font-size:44px;}
-  .h3{font-size:26px;}
-  .menu{font-size:19px;}
+ h1, .h1{font-size:100px; line-height:90px;}
+ h2, .h2{font-size:44px;}
+ h3, .h3{font-size:26px;}
+ .menu{font-size:19px;}
 }
 
 /* ============================================================
@@ -102,12 +102,21 @@ button{font:inherit;}
    ============================================================ */
 
 .hero{height:100vh; position:relative; display:flex; align-items:center;
-  overflow:hidden; padding-left:7vw;}
-.hero-type{position:relative; z-index:2;}
+  overflow:hidden; padding-left:7vw; margin-top: 8vh}
+.hero-type{position:relative; z-index:2; margin-bottom: 16vh}
 .ht-imago{color:var(--ash); margin:0 0 2px;}
 .ht-big{color:var(--ash); margin:0;}
-.hero-wasp{position:absolute; right:-6vw; top:50%; width:min(58vw,660px); height:auto;
-  transform:translateY(-52%) translateX(-45%) rotate(30deg); z-index:1; opacity:.92;}
+.hero-wasp{
+  position: absolute;
+  right: -24vw;
+  top: 80%;
+  width: min(58vw, 660px);
+  height: auto;
+  scale: 1.5;
+  transform: translateY(-52%) translateX(-45%) rotate(30deg);
+  z-index: 1;
+  opacity: .92;
+}
 .scroll-cue{position:absolute; bottom:34px; left:0; right:0; text-align:center;
   color:var(--ash-soft); z-index:2;}
 .scroll-cue .arrow{display:block; margin-top:6px; animation:bob 2s ease-in-out infinite;}
@@ -146,7 +155,7 @@ button{font:inherit;}
   animation-delay: calc(var(--i) * .09s), calc(.6s + var(--i) * .35s);
   box-shadow:0 8px 22px rgba(0,0,0,.35); transition: transform .25s ease, box-shadow .25s ease;}
 .node svg{width:20px; height:20px; position:relative;}
-.node img{width:20px; height:20px; object-fit:contain; position:relative;}
+.node img{width:80px; height:80px; object-fit:contain; position:relative;}
 .node:hover, .node:focus-visible{transform:translate(-50%,-50%) scale(1.18);
   box-shadow:0 10px 30px rgba(0,0,0,.5), 0 0 0 10px rgba(251,243,228,.06);}
 .node:focus-visible{outline:2px solid var(--light); outline-offset:4px;}
@@ -205,7 +214,7 @@ button{font:inherit;}
 .cover-number{position:absolute; top:64px; left:10vw;}
 .cover-body{position:absolute; top:50%; left:10vw; right:10vw; transform:translateY(-50%);
   display:flex; align-items:center; gap:5vw; flex-wrap:wrap;}
-.cover-illustration{width:min(24vw,280px); flex:0 0 auto;}
+.cover-illustration{width:min(36vw,360px); flex:0 0 auto;}
 .cover-illustration svg, .cover-illustration img{width:100%; height:auto; display:block;}
 .cover-text{flex:1 1 320px; min-width:280px;}
 .cover-insetto{text-transform:uppercase; letter-spacing:.1em; margin-bottom:8px;}
@@ -236,6 +245,18 @@ button{font:inherit;}
   .cover-illustration{width:40vw;}
   .section-nav{padding:0 6vw 70px;}
 }
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.op-card{
+  display: flex; flex-direction: column; gap: .4rem;
+  background: none; border: 0; padding: 0;
+  color: inherit; text-align: left; cursor: pointer;
+}
+.op-cover{ aspect-ratio: 4/5; overflow: hidden; }
+.op-cover img{ width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ============================================================
    CORPUS

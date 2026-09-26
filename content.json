@@ -40,8 +40,16 @@
       "fg": "#FBF3E4",
       "desc": "Illustrazioni editoriali · icone · pattern · tavole",
       "opere": [
-        {"title": "Sembianti"},
-        {"title": "Insetti"}
+        {
+          "slug": "insetti",
+          "title": "Gesta Imaginum",
+          "anno": "2026",
+          "tecnica": "Illustrazione digitale",
+          "desc": "Una tavola entomologica del fare. Ogni insetto dà corpo a un gesto: comporre, soffiare, incidere, fino al compimento della forma.",
+          "cover": "assets/03incidere/Opera01/01-componere.png",
+          "immagini": [          ]
+        },
+        {"title": "Sembianti"}
       ]
     },
     {

@@ -172,11 +172,19 @@ function init(SECTIONS){
     const ovContent = document.getElementById('ovContent');
     ovContent.innerHTML = '';
     (s.opere || []).forEach(op=>{
-      const card = document.createElement('div');
-      card.className = 'op-card h4';
-      card.textContent = op.title;
+      const card = document.createElement('button');
+      card.className = 'op-card';
+      card.innerHTML = `
+    ${op.cover ? `<div class="op-cover"><img src="${op.cover}" alt="${op.title}" loading="lazy"></div>` : ''}
+    <span class="op-title h4">${op.title}</span>
+    ${op.anno || op.tecnica ? `<span class="op-meta caption">${[op.anno, op.tecnica].filter(Boolean).join(' · ')}</span>` : ''}`;
+      if(op.slug) card.addEventListener('click', ()=>openOpera(s, op));
       ovContent.appendChild(card);
     });
+    function openOpera(s, op){
+      // pagina opera: da disegnare
+      console.log('apri opera', s.gesto, op.slug, op.immagini);
+    }
 
     const idx = SECTIONS.findIndex(sec => sec.id === s.id);
     const prev = SECTIONS[(idx - 1 + SECTIONS.length) % SECTIONS.length];
